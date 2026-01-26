@@ -20,6 +20,11 @@ module.exports = defineConfig(Meteor => {
             use: ["postcss-loader"],
             type: "css",
           },
+          {
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ["@svgr/webpack"],
+          },
         ],
       },
     },
